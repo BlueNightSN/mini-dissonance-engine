@@ -1,0 +1,103 @@
+import type { EventInput } from "../models/event";
+
+export const mockEvents: EventInput[] = [
+  {
+    stimulus: "question",
+    modality: "text",
+    response: "I usually prefer to start difficult tasks early in the morning.",
+    category: "work",
+    timestamp: 1714564800000,
+  },
+  {
+    stimulus: "vote",
+    modality: "video",
+    response: 82,
+    category: "opinion",
+    timestamp: 1714651200000,
+  },
+  {
+    stimulus: "challenge",
+    modality: "audio",
+    response: "I said I enjoy public speaking, but I still avoided volunteering for the presentation.",
+    category: "social",
+    timestamp: 1714737600000,
+  },
+  {
+    stimulus: "question",
+    modality: "video",
+    response: "Family time is important, but I often postpone personal calls during busy weeks.",
+    category: "personal",
+    timestamp: 1714824000000,
+  },
+  {
+    stimulus: "vote",
+    modality: "text",
+    response: 15,
+    category: "work",
+    timestamp: 1714910400000,
+  },
+  {
+    stimulus: "challenge",
+    modality: "video",
+    response: 108,
+    category: "opinion",
+    timestamp: 1714996800000,
+  },
+  {
+    stimulus: "question",
+    modality: "audio",
+    response: "I tell friends that honesty matters most, yet I soften difficult feedback to avoid tension.",
+    category: "social",
+    timestamp: 1715083200000,
+  },
+  {
+    stimulus: "vote",
+    modality: "audio",
+    response: -12,
+    category: "personal",
+    timestamp: 1715169600000,
+  },
+  {
+    stimulus: "challenge",
+    modality: "text",
+    response:
+      "I want to maintain a strong work-life balance, but this week I answered messages late at night, skipped dinner, and told myself it was only temporary even though it has happened several times before.",
+    category: "work",
+    timestamp: 1715256000000,
+  },
+  {
+    stimulus: "question",
+    modality: "text",
+    response: 64,
+    category: "opinion",
+    timestamp: 1715342400000,
+  },
+  {
+    stimulus: "vote",
+    modality: "video",
+    response: "I publicly supported the team decision even though privately I preferred the opposite direction.",
+    category: "work",
+    timestamp: 1715428800000,
+  },
+  {
+    stimulus: "challenge",
+    modality: "audio",
+    response: "I describe myself as spontaneous, but I still rehearse casual conversations in advance.",
+    category: "personal",
+    timestamp: 1715515200000,
+  },
+  {
+    stimulus: "question",
+    modality: "video",
+    response: "I claim that social media does not affect my mood, yet I keep checking reactions after posting.",
+    category: "social",
+    timestamp: 1715601600000,
+  },
+  {
+    stimulus: "vote",
+    modality: "text",
+    response: 47,
+    category: "opinion",
+    timestamp: 1715688000000,
+  },
+];
