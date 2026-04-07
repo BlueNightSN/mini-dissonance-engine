@@ -1,11 +1,14 @@
 # Mini Dissonance Engine
 
-Mini Dissonance Engine is a backend-only Node.js + TypeScript project focused on the first two stages of a behavioral dissonance pipeline:
+Mini Dissonance Engine is a backend-only Node.js + TypeScript project that simulates a small behavioral analysis pipeline over a deterministic mock dataset.
 
-1. load mock user events
-2. normalize each event into a numeric representation
+It currently:
 
-Anomaly detection is intentionally not implemented yet.
+1. loads mock user events
+2. normalizes each event into numeric features
+3. compares each event against relevant historical context
+4. assigns an anomaly status and score
+5. prints final event output plus a context profile summary
 
 ## Install
 
@@ -14,6 +17,12 @@ npm install
 ```
 
 ## Run
+
+```bash
+npm run dev
+```
+
+You can also run:
 
 ```bash
 npm start
@@ -31,20 +40,37 @@ npm run typecheck
 npm run build
 ```
 
-## Structure
+## What The Program Prints
+
+Running the project prints:
+
+- a `Final Output` block for each event
+- the event `status` (`baseline`, `consistent`, or `anomalous`)
+- the computed `anomalyScore`
+- a short human-readable summary for that event
+- an `Additional Analysis: Context Profiles` section at the end
+
+## Project Structure
 
 ```text
 src/
-  config/    Fixed score mappings for normalization
+  config/    Fixed score mappings used during normalization
   data/      Mock event dataset
-  models/    Strict domain types
-  services/  Normalization service and anomaly-engine stub
+  models/    Domain types for events, normalization, and analysis
+  services/  Normalization, history, anomaly, and context profile services
   utils/     Shared math helpers
-  index.ts   Entry point that loads, normalizes, and prints events
+  index.ts   Entry point that runs the pipeline and prints output
 ```
 
 ## Current Scope
 
 - Mock data is static and deterministic.
 - Normalization covers stimulus, modality, category, response, and time.
-- Anomaly detection is a TODO stub for future work.
+- History is scoped by matching category and stimulus.
+- Anomaly scoring is context-aware and category-weighted.
+- Context profile summaries describe dominant modality patterns per context.
+
+## Notes
+
+- This project is intentionally small and console-based.
+- Output is designed to be easy to inspect from the terminal.
